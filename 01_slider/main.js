@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-    var $debug = $('#debug');
-
     Slider = {
         $slider: null, width: 0,
         $items: null, itemsCount: 0, /* TODO: <3 items */
@@ -82,7 +80,5 @@ $(document).ready(function(){
     }
 
     Slider.init('.slider');
-
-    console.log('OK');
 
 });

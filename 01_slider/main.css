@@ -49,6 +49,10 @@ img {
   opacity: 1;
 }
 
+.slider-item.previous,
+.slider-item.next {
+  opacity: 1;
+}
 .slider-item.previous {
   transform: translateX(-100%);
 }

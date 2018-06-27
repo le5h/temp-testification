@@ -1,0 +1,26 @@
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font: 1rem/1.375 sans-serif;
+  margin: 0;
+  overflow-y: scroll;
+  cursor: default;
+}
+
+html, body, body *, ::before, ::after {
+  box-sizing: border-box;
+}
+
+#showcase {
+  width: 800px;
+  height: 600px;
+  display: block;
+  margin: 10px auto;
+  outline: 1px solid;
+}
