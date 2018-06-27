@@ -2,12 +2,73 @@
 <html>
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+
+  <title>CENTER</title>
+
+  <style>
+    html, body { height: 100%; }
+    body { margin: 0; box-sizing: border-box; }
+
+    .container {
+      width: 100%; height: 50%;
+      position: relative;
+      background-color: rosybrown;
+    }
+    .content {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  </style>
+
 </head>
 
 <body>
+
+  <!--
+  Сверстать 2 блока (1-Главный, 2-Дочерний). Разместить блок 2 внутри блока 1 строго посередине несколькими способами.
+  А) а с помощью JS.
+  Б) с помощью CSS.
+  В) так чтобы весь код был только в 1-й HTML страницы.  
+  -->
+
+  <div id="container">
+    <div id="content">
+      CONTENT A
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="content">
+      CONTENT B
+    </div>
+  </div>
+
+  <script>
+
+    window.onload = function(){
+
+      var container = document.getElementById('container'),
+          content = document.getElementById('content');
+      
+      container.style.backgroundColor = 'aquamarine';
+      container.style.position = 'relative';
+      container.style.height = window.innerHeight/2 + 'px';
+
+      content.style.position = 'absolute';
+      content.style.top = container.clientHeight/2 - content.clientHeight/2 + 'px';
+      content.style.left = container.clientWidth/2 - content.clientWidth/2 + 'px';
+      
+    // TODO: onresize
+
+      console.log('OK');
+
+    }
+
+  </script>
 
 </body>
 
