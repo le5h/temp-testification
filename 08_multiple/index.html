@@ -2,13 +2,57 @@
 <html>
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+
+  <title>Tripple KILL</title>
+
+  <link rel="stylesheet" href="main.css">
+
 </head>
 
 <body>
 
+  <!--
+    Создать элемент на странице. При клике на который будт открываться 3 любых
+    элемента на странице в течении 1 секунды. И при повторном клике 3 элемента будут
+    закрываться.
+    Как они будут открываться закрываться на ваше усмотрение. Не забыть про дебагинг кнопки при
+    частых нажатиях.
+  -->
+
+  <div class="adaptive">
+
+    <button id="trigger">ЖМАКНИ МЕНЯ ПОЛНОСТЬЮ</button>
+
+    <div class="container">
+
+      <div class="item" id="first">
+        <img src="https://img.memecdn.com/refresh_o_1525033.jpg" alt="">
+      </div>
+    
+      
+      <div class="item" id="second">
+        <img src="https://img.memecdn.com/bitch-high-as-fuck-eat-air-and-shit_o_435221.jpg" alt="">
+      </div>
+    
+        
+      <div class="item" id="third">
+        <img src="https://img.memecdn.com/why_o_4422815.jpg" alt="">
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+
 </body>
+
+<!-- как-же жаааарко -->
 
 </html>

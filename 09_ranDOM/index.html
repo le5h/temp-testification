@@ -2,13 +2,73 @@
 <html>
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+
+  <title>RanDOM</title>
+
+  <style>
+  
+    body {
+      position: relative;
+    }
+
+    .item {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1vw; height: 1vw; 
+    }
+
+  </style>
+
 </head>
 
 <body>
 
+  <a href="#" id="surprize">humble link</a>
+
+  <script>
+  
+    /* 9. С помощью цикла вывести случайное число (от 10 до 100 ) ,разноцветных
+          квадратиков. На HTML страницу ( исполнять код желательно на JS ) */
+
+    var from = 10, to = 100;
+
+    window.onload = function(){
+
+      function explosion(number){
+        
+        for(var i=0; i<number; i++){
+
+          var color = 'rgba('+(Math.random()*255)+','+(Math.random()*255)+','+(Math.random()*255)+','+(Math.random())+')',
+              position = { top: (Math.random()*window.innerHeight) + 'px', left: (Math.random()*window.innerWidth) + 'px' };
+
+          var elm = document.createElement('div');
+          elm.className = 'item'
+          elm.style.backgroundColor = color;
+          elm.style.top = position.top;
+          elm.style.left = position.left;
+          
+          document.body.insertBefore(elm);
+
+        }
+
+      }
+
+      var btn = document.getElementById('surprize');
+
+      btn.onclick = function(ev){
+        ev.preventDefault();
+        explosion(Number(Math.random() * (to-from) - from));
+      }
+
+    };
+
+  </script>
+
 </body>
+
+
 
 </html>
