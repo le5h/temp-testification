@@ -1,0 +1,67 @@
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font: 1rem/1.375 sans-serif;
+  margin: 0;
+  overflow-y: scroll;
+  cursor: default;
+}
+
+html, body, body *, ::before, ::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.adaptive {
+  width: 100%;
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider {
+  height: 30rem;
+  position: relative;
+}
+
+.slider-item {
+  height: 100%; width: 100%;
+  position: absolute;
+  top: 0; left: 0;
+  transition-property: transform;
+  transition-duration: 300ms;
+}
+
+.slider-item.current {
+  z-index: 1;
+}
+
+.slider-item.moving {
+  transition-duration: 0;
+}
+
+.slider-item-image,
+.slider-item-content {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider-item-image {
+  width: 100%;
+}
+.slider-item-content {
+  background-color: rgba(0,0,0,0.5);
+  color: rgb(255,255,255);
+  text-align: center;
+  font-size: 3rem;
+  padding: 2rem 3rem;
+}
