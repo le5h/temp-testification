@@ -37,6 +37,8 @@
 
     window.onload = function(){
 
+      var btn = document.getElementById('surprize');
+
       function explosion(number){
         
         for(var i=0; i<number; i++){
@@ -45,18 +47,16 @@
               position = { top: (Math.random()*window.innerHeight) + 'px', left: (Math.random()*window.innerWidth) + 'px' };
 
           var elm = document.createElement('div');
-          elm.className = 'item'
+          elm.className = 'item';
           elm.style.backgroundColor = color;
           elm.style.top = position.top;
           elm.style.left = position.left;
           
-          document.body.insertBefore(elm);
+          document.body.insertBefore(elm, btn);
 
         }
 
       }
-
-      var btn = document.getElementById('surprize');
 
       btn.onclick = function(ev){
         ev.preventDefault();
