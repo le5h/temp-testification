@@ -31,22 +31,33 @@ img {
 .slider {
   height: 30rem;
   position: relative;
+  overflow: hidden;
 }
 
 .slider-item {
   height: 100%; width: 100%;
   position: absolute;
   top: 0; left: 0;
-  transition-property: transform;
-  transition-duration: 300ms;
+  transition-property: transform, opacity;
+  transition-duration: 300ms, 500ms;
+  opacity: 0;
 }
 
 .slider-item.current {
   z-index: 1;
+  transform: translateX(0%);
+  opacity: 1;
 }
 
-.slider-item.moving {
-  transition-duration: 0;
+.slider-item.previous {
+  transform: translateX(-100%);
+}
+.slider-item.next {
+  transform: translateX(100%);
+}
+
+.slider.moving .slider-item {
+  transition-duration: 0ms, 500ms;
 }
 
 .slider-item-image,
